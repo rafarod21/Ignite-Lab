@@ -1,16 +1,8 @@
-import { gql, useQuery } from '@apollo/client';
+import { GetLessonsQuery, Lesson as LessonType } from '../graphql/generated';
 import { Lesson } from './Lesson';
 
-interface Lesson {
-  id: string;
-  title: string;
-  slug: string;
-  availableAt: string;
-  lessonType: 'live' | 'class';
-}
-
 interface SidebarProps {
-  lessons: Lesson[];
+  lessons: LessonType[];
 }
 
 export function Sidebar({ lessons }: SidebarProps) {

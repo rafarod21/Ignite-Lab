@@ -6,33 +6,11 @@ import { Header } from '../components/Header';
 import { Sidebar } from '../components/Sidebar';
 import { Video } from '../components/Video';
 
-const GET_LESSONS_QUERY = gql`
-  query {
-    lessons(orderBy: availableAt_ASC, stage: PUBLISHED) {
-      id
-      lessonType
-      availableAt
-      title
-      slug
-    }
-  }
-`;
-
-interface Lesson {
-  id: string;
-  title: string;
-  slug: string;
-  availableAt: string;
-  lessonType: 'live' | 'class';
-}
-
-interface GetLessonsQueryResponse {
-  lessons: Lesson[];
-}
+import { Lesson, useGetLessonsQuery } from '../graphql/generated';
 
 export function Event() {
   const navigate = useNavigate();
-  const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY);
+  const { data } = useGetLessonsQuery();
   const { slug } = useParams<{ slug: string }>();
 
   useEffect(() => {
@@ -52,7 +30,7 @@ export function Event() {
             ) : (
               <Video lessonSlug={data?.lessons[0].slug} />
             )}
-            <Sidebar lessons={data?.lessons} />
+            <Sidebar lessons={data?.lessons as Lesson[]} />
           </>
         )}
       </main>
