@@ -77,7 +77,7 @@ Em andamento :hammer_and_pick:
 <img src="https://avatars0.githubusercontent.com/u/39251153?s=460&u=b18964e9a5e2c3c1ef9bc74ae8c35b11095c841b&v=4" width=115><br>
 <a aria-label="LinkedIn - Rafael Rodrigues" href="https://www.linkedin.com/in/rafael-montrezol-942a60170">
     <img src="https://img.shields.io/static/v1?logo=linkedin&label=LinkedIn&message=Rafael%20Rodrigues&color=00A0DC&style=flat&labelColor=0077B5"> 
-</a>
+</a><br>
 <a aria-label="GitHub - Rafael Rodrigues" href="https://github.com/rafarod21">
     <img alt="GitHub - Rafael Rodrigues" src="https://img.shields.io/static/v1?logo=github&label=GitHub&message=Rafael%20Rodrigues&color=2FBB4F&style=flat&labelColor=211F1F"></img>
 </a>
